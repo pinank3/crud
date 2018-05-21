@@ -69,13 +69,13 @@ input[type=submit]:hover {
 </head>
 <body>
 <div class="container">
-  <form method="post" action="showdata.php">
+  <form id="task">
     <div class="row">
       <div class="col-25">
         <label for="fname">First Name</label>
       </div>
       <div class="col-75">
-        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+        <input type="text" name="firstname" placeholder="Your name..">
       </div>
     </div>
     <div class="row">
@@ -83,14 +83,20 @@ input[type=submit]:hover {
         <label for="lname">Last Name</label>
       </div>
       <div class="col-75">
-        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+        <input type="text" name="lastname" placeholder="Your last name..">
       </div>
     </div>
     
     <div class="row">
-      <input type="submit" value="Submit">
+      <input type="button" value="Enter">
+      <a href="showdata.php"></a>
     </div>
-    <a href="showdata.php"></a>
+   <div class="msg_task"></div>
   </form>
+  <a href="show_record.php">Show records</a>
 </div>
+<script src="../assets/js/jquery.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.scrollUp.min.js"></script>
+    <script src="../assets/js/form.js"></script>
 

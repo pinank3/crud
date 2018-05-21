@@ -6,8 +6,8 @@
 		const DATABASE="pinank";
 	}
 	interface db_general_function{
-		function insert();
-		function select();
+		function insert($tables,$columns,$values);
+		function select($columns,$tables,$condition);
 		function delete();
 		function update();
 	}
