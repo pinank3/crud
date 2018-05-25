@@ -8,11 +8,11 @@ require_once "db_helper.php";
 				"count(*) as cnt","users","us_email='$email'"
 			);
 		}
-		function user_insert($name,$mobile,$email,$password){
+		function user_insert($name,$dob,$email,$password){
 			return self::insert(
 					"users",
-					"us_name,us_mobile,us_email,us_password",
-					"'$name','$mobile','$email','$password'"
+					"us_name,us_dob,us_email,us_password",
+					"'$name','$dob','$email','$password'"
 					);			
 				}
 		function get_user_data($email){

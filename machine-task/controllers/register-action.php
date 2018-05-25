@@ -6,8 +6,8 @@
 	if(!preg_match("/^[a-zA-Z][a-zA-Z ]+[a-zA-Z]$/",$_POST['username'])){
 		echo "Invalid Name";
 	}
-	elseif(!preg_match("/^[1-9][0-9]{9}$/",$_POST['usermobile'])){
-		echo "Invalid Mobile No.";	
+	elseif(!preg_match("/^([0]?[1-9]|[1][0-9]|[2][0-9]|[3][0-1])-([0]?[1-9]|[1][0-2])-([0-9]{4})$/",$_POST['userdob'])){
+		echo "Invalid D.O.B";	
 	}
 	elseif(!preg_match("/^([a-zA-Z0-9][a-zA-Z0-9_\.]+[a-zA-Z0-9])@([a-zA-Z0-9][a-zA-Z0-9]+[a-zA-Z0-9])\.([a-z]{2,})(\.[a-z]{2,})?$/",$_POST['useremail'])){
 		echo "Invalid Emailid";
@@ -21,7 +21,7 @@
 	else {
 		// echo "ok";
 		$name=($_POST['username']);
-		$mobile=($_POST['usermobile']);
+		$dob=($_POST['userdob']);
 		$email=($_POST['useremail']);
 		$password=sha1($_POST['userpassword']);
 		// echo $password;
@@ -31,7 +31,7 @@
 			echo "Emailid exists";
 		}
 		else{
-			if($obj->user_insert($name,$mobile,$email,$password)){
+			if($obj->user_insert($name,$dob,$email,$password)){
 				echo "user added";
 			}
 		}
