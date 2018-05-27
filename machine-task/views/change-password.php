@@ -1,3 +1,11 @@
+<?php  
+	
+	 // session_start();
+	 // if(!isset($_SESSION['project_usname'])){
+	 // 	header("location:index.php");
+	 // }
+	require_once "header.php";
+?>
 <div class="container">
 <div>
 	<form id="update_form" ">
@@ -10,3 +18,7 @@
 	<div class="msg_update"></div>
 </div>
 </div>
+<?php 
+
+	require_once "footer.php";
+?>
